@@ -1,107 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Ticket</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!--Header and Menu Section-->
-    <header class="container">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a class="active" href="#">Sign Up</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!--Booking Section-->
-    <main class="main-content container">
-      <div class="booking-content">
-        <h1>Mega City Bus</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<!doctype html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight Booking</title>
+<!-- Font Awesome -->
+<script async src="https://kit.fontawesome.com/ead6b55870.js" crossorigin="anonymous"></script>
+<!-- Google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<!-- local scripts -->
+<script defer src="js/components.js"></script>
+<script defer src="js/main.js"></script>
+<!-- Stylesheets --->
+<link rel="stylesheet" href="css/main.css">
+
+<!--Header and Menu Section-->
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a class="active" href="#">Sign Up</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="booking-content">
+    <h1>Discover<br>Around The World</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  </div>
+
+  <!-- Booking Section -->
+  <div class="booking-form">
+    <h3>Booking flights</h3>
+    <div class="inputs inputs-location">
+      <div class="input-group">
+        <label for="input-from">Flying from</label>
+        <div data-text-component="from"></div>
       </div>
-      <div class="booking-form">
-        <h3>Explore By Bus</h3>
-        <div class="inputs">
-          <div class="input-group">
-            <label for="from">From</label>
-            <input id="from" class="inp-style" type="text" placeholder="From">
-          </div>
-          <div class="input-group">
-            <label for="to">To</label>
-            <input id="to" class="inp-style" type="text" placeholder="To">
-          </div>
-        </div>
-        <div class="inputs">
-          <div class="input-group">
-            <label" for="">Departure</label>
-            <input class="inp-style" type="date" name="">
-          </div>
-          <div class="input-group">
-            <label for="">Return</label>
-            <input class="inp-style" type="date" name="">
-          </div>
-        </div>
-        <div class="inputs">
-          <div class="input-group ticket-type">
-            <div>
-              <label for="f-class-tickets">First Class ($150)</label>
-              <input id="f-class-tickets" class="inp-style inp-width" type="number" name="">
-            </div>
-            <div class="plus-minus-btn">
-              <button>+</button>
-              <button>-</button>
-            </div>
-          </div>
-          <div class="input-group ticket-type">
-            <div>
-              <label for="e-class-tickets">Economy ($100)</label>
-              <input id="e-class-tickets" class="inp-style inp-width" type="number" name="">
-            </div>
-            <div class="plus-minus-btn">
-              <p> <span>+</span> <span>-</span> </p>
-            </div>
-          </div>
-        </div>
-        <div class="calculations">
-          <div class="amount">
-            <div class="left">
-              <p>Subtotal</p>
-            </div>
-            <div class="right">
-              <p>$500</p>
-            </div>
-          </div>
-          <div class="amount">
-            <div class="left">
-              <p>Charge 10% VAT</p>
-            </div>
-            <div class="right">
-              <p>$50</p>
-            </div>
-          </div>
-          <hr>
-          <div class="amount">
-            <div class="left">
-              <h4>Total</h4>
-            </div>
-            <div class="right">
-              <p>$550</p>
-            </div>
-          </div>
-        </div>
-        <button class="btn-style">Book Now</button>
+      <div class="input-group">
+        <label for="input-to">Flying To</label>
+        <div data-text-component="to"></div>
       </div>
-    </main>
-    <!--Thank You-->
-  </body>
-</html>
+    </div>
+
+    <div class="inputs">
+      <div class="input-group">
+        <label for="input-departure-date">Departure</label>
+        <div data-calendar-component="departure"></div>
+      </div>
+      <div class="input-group">
+        <label for="input-return-date">Return</label>
+        <div data-calendar-component="return"></div>
+      </div>
+    </div>
+
+    <div class="inputs">
+      <div class="input-group f-class">
+        <label for="f-class-input">First Class ($150)</label>
+        <div data-number-component></div>
+      </div>
+      <div class="input-group e-class">
+        <label for="e-class-input">Economy ($100)</label>
+        <div data-number-component></div>
+      </div>
+    </div>
+    <div class="calculations">
+      <div class="amount">
+        <p>Subtotal</p>
+        <p id="subtotal">0</p>
+      </div>
+      <div class="amount">
+        <p>Charge 10% VAT</p>
+        <p id="vat">0</p>
+      </div>
+      <hr>
+      <div class="amount">
+        <p>Total</p>
+        <p id="total">0</p>
+      </div>
+    </div>
+    <div id="btn-book-now" class="btn-big">Book Now</div>
+  </div>
+
+</main>

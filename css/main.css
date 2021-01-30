@@ -1,0 +1,271 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* Main */
+:root {
+  --border-color: #cdd3da;
+  --border-color-focus: #86aaff;
+  --outline-color: rgba(206, 202, 255, 0.4);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background:url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  max-width: 1030px;
+  margin: 0 auto;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 3rem 1.3fr;
+  grid-template-columns: 2fr 1.3fr;
+  grid-gap: 3rem;
+}
+
+.booking-form {
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.booking-content {
+  margin-top: 60px;
+  color: white;
+}
+
+.booking-content h1{
+  text-transform: uppercase;
+}
+
+.inputs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.inputs-location {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+}
+
+/* modal */ 
+.modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(206, 202, 255, 0.9);
+  padding: 20px;
+}
+
+.row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 0;
+}
+
+.calculations-summary {
+  margin-top: 20px;
+}
+.calculation-summary div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* Inputs general style */ 
+input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+/* nav bar */ 
+nav {
+  margin: 1.5rem;
+}
+nav ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0px 6px;
+}
+nav ul li a{
+    color: #fff;
+    padding: 10px;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    background-color: #3352F2;
+    border-radius: 5px;
+}
+
+/* Components */
+.nc, .tc, .cc{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px; 
+  border: 3px solid rgba(255,255,255, 0);
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.nc:hover, .nc-focus, .tc-focus, .cc-focus {
+  border-color: var(--outline-color);
+}
+
+.tc-input, .cc-input {
+  color: #212529; 
+  border: 1px solid var(--border-color); 
+  border-radius: 5px;
+}
+
+.nc-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #212529; 
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 10px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.nc-input::-webkit-outer-spin-button, 
+.nc-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nc-input:focus {
+  outline: none;
+  border-top: 1px solid var(--border-color-focus);
+  border-bottom: 1px solid var(--border-color-focus);
+}
+
+.tc-input:focus, .cc-input:focus {
+  outline: none;
+  border: 1px solid var(--border-color-focus);
+}
+
+.nc-controller {
+  border: 1px solid var(--border-color);
+  font-size: 0.7rem;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e9ecef;
+  color: #212529;
+  -webkit-transition: background-color 0.2s, border-color 0.1s;
+  -o-transition: background-color 0.2s, border-color 0.1s;
+  transition: background-color 0.2s, border-color 0.1s;
+}
+
+.nc-controller:hover {
+  background-color: #6b747e;
+  border-color: #6b747e;
+  color: #fff;
+}
+
+.nc-plus-btn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
+.nc-minus-btn {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nc-controller-focus {
+  border-color: var(--border-color-focus);
+}
+
+
+/* calculations */ 
+.calculations {
+  margin-top: 2rem;
+}
+
+.amount {
+  margin: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.amount :nth-child(2)::before {
+  content: "$";
+}
+
+.btn-big {
+  height: 2.3rem;
+  background-color: #1e90ff;
+  color: #fff;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px; 
+}
+
+.btn-big:hover {
+  background-color: #006ad1;
+}
